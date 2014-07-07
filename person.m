@@ -1,23 +1,20 @@
+#import "ViewController.h"
 #import "Person.h"
-@implementation Person
-// 名前を取得する
-- (NSString *)name
+@interface ViewController ()
+@end
+@implementation ViewController
+- (void)viewDidLoad
 {
-    return _name;
-}
-// 名前を設定する
-- (void)setName:(NSString *)name
-{
-    _name = name;
-}
-// 年齢を取得する
-- (NSInteger)age
-{
-    return _age;
-}
-// 年齢を設定する
-- (void)setAge:(NSInteger)age
-{
-    _age = age;
+    [super viewDidLoad];
+    
+    // Personクラスのインスタンスを生成する
+    Person *aPerson = [Person new];
+    // nameに値を設定する
+    aPerson.name = @"山田太郎";
+    
+    // nameから値を取得する
+    NSString *aName = aPerson.name;
+    
+    NSLog(@"aName : %@", aName);
 }
 @end
