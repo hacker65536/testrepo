@@ -1,2 +1,2 @@
-@interface クラス名 : 親クラス名
+@interface Person : NSObject
 @end
